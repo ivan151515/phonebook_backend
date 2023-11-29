@@ -2,7 +2,7 @@ const express = require("express")
 const morgan = require("morgan")
 const cors = require("cors")
 const axios = require("axios")
-const URL = "http://localhost:3001/persons/"
+const URL = "/persons/"
 const app = express()
 
 app.use(express.static('dist'))
