@@ -5,6 +5,7 @@ const axios = require("axios")
 const URL = "http://localhost:3001/persons/"
 const app = express()
 
+app.use(express.static('dist'))
 app.use(cors())
 app.use(express.json())
 morgan.token('body', 
