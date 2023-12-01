@@ -1,7 +1,7 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
 if (process.argv.length<3) {
-  console.log('give password as argument')
+  console.log("give password as argument")
   process.exit(1)
 }
 
@@ -10,7 +10,7 @@ console.log(password)
 const url =
   `mongodb+srv://ivanbatur:${password}@cluster0.utp464b.mongodb.net/noteApp?retryWrites=true&w=majority`
   //<username>:<password>@cluster0.utp464b.mongodb.net/?retryWrites=true&w=majority"
-mongoose.set('strictQuery',false)
+mongoose.set("strictQuery",false)
 mongoose.connect(url)
 
 const personSchema = new mongoose.Schema({
@@ -18,7 +18,7 @@ const personSchema = new mongoose.Schema({
   number: Number,
 })
 
-const Person = mongoose.model('Person', personSchema)
+const Person = mongoose.model("Person", personSchema)
 
 console.log(process.argv)
 const person = new Person({
@@ -27,6 +27,6 @@ const person = new Person({
 })
 
 person.save().then(result => {
-    console.log(result)
-    mongoose.connection.close()
-  })
+  console.log(result)
+  mongoose.connection.close()
+})

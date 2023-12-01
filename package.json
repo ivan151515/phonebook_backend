@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "json-server -p3001 --watch db.json && node index.js ",
     "dev": "nodemon index.js",
-    "server": "json-server -p3001 --watch db.json"
+    "server": "json-server -p3001 --watch db.json",
+    "lint": "eslint ."
+
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +24,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.54.0",
     "nodemon": "^3.0.1"
   }
 }
